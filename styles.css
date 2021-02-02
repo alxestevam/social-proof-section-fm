@@ -16,10 +16,126 @@
 
 body {
     font-family: 'Spartan', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 80px 28px;
+    text-align: center;
+    max-width: 375px;
+}
+
+main > h1 {
+    color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+main > h2 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+    color: var(--dark-gray-magenta)
+}
+
+.card {
+    border-radius: 8px;
+    background-color: var(--gray-magenta);
+    margin-top: 16px;
+    padding: 5px;
+}
+
+.card:first-of-type {
+    margin-top: 40px;
+}
+
+.card.card-stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-magenta);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.card.card-stars > .five-stars {
+    width: 118px;
+    height: 40px;
+
+    background-image: 
+        url(/images/icon-star.svg), 
+        url(/images/icon-star.svg),
+        url(/images/icon-star.svg),
+        url(/images/icon-star.svg),
+        url(/images/icon-star.svg);
+    
+    background-repeat: no-repeat,
+                       no-repeat,
+                       no-repeat,
+                       no-repeat,
+                       no-repeat;
+
+    background-position: 10% center, 
+                         30% center,
+                         50% center,
+                         70% center,
+                         90% center;
+}
+
+article.card.card-comment {
+    padding: 30px;
+    background-color: var(--primary-dark);
+    text-align: justify;
+}
+
+article.card.card-comment:first-of-type {
+    margin-top: 30px;
+}
+
+article.card.card-comment > .title {
+    display: flex;
+    align-items: center;
+}
+
+article.card.card-comment > .title > .author-name-container {
+    margin-left: 23px;
+}
+
+article.card.card-comment > .title > .author-name-container > h1, h2 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+article.card.card-comment > .title > img {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+}
+
+article.card.card-comment > .title > .author-name-container > h1 {
+    color: var(--white);
+}
+
+article.card.card-comment > .title > .author-name-container > h2 {
+    color: var(--primary);
+}
+
+article.card.card-comment > p {
+    color: var(--white);
+    margin-top: 32px;
 }
 
 .attribution {
+    display: none;
     font-size: 11px;
     text-align: center;
 }
